@@ -1,0 +1,24 @@
+version: "3.7"
+services:
+  auth:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 6000:6000
+    environment:
+      - HOST=0.0.0.0
+      - PORT=:6000
+      - DB_HOST=host.docker.internal
+      - DB_PORT=27017
+      - DB_PASSWORD=
+      - DB_USER=
+      - DB_NAME=cb_auth
+      - DB_COLLECTION=users
+      - I18N_LOCALE_DIR=./locales
+      - I18N_FALLBACK=en
+      - I18N_LOCALES=en,tr
+      - JWT_SECRET=secret
+      - JWT_DOMAIN=
+      - JWT_SECURE=false
+      - JWT_HTTP_ONLY=true

@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "945792d0-b8b7-4c64-9235-e47abc802a5d",
+		"name": "Claim Based Authorization",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24444975"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"test@test.com\",\n    \"password\": \"testestest\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/api/auth/v1/register",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"v1",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"test@test.com\",\n    \"password\": \"testestest\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/api/auth/v1/login",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/api/auth/v1/logout",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"v1",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Admin Role",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/api/auth/v1/add-role",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"v1",
+						"add-role"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test Role",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/api/auth/v1/test",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"v1",
+						"test"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "API_URL",
+			"value": "http://localhost:6000",
+			"type": "string"
+		}
+	]
+}
